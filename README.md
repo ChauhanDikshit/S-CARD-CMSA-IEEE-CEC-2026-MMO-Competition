@@ -1,0 +1,1 @@
+# S-CARD-CMSA-IEEE-CEC-2026-MMO-Competition
