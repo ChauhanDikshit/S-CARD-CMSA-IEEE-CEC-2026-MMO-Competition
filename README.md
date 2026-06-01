@@ -57,14 +57,7 @@ where $\mathcal{D}_{\Delta_f,\tau_\rho}(\cdot)$ denotes objective-value filterin
 
 For a secondary candidate $x$, its normalized distance to the current reported set is
 
-$$
-\rho(x)
-=
-\min_{y\in\mathcal{R}}
-\left\|
-\frac{x-y}{u-l}
-\right\|_2 ,
-$$
+$$\rho(x)=\min_{y\in\mathcal{R}}\left\|\frac{x-y}{u-l}\right\|_2 ,$$
 
 where $u$ and $l$ are the upper and lower bound vectors. The candidate is inserted if
 
