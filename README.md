@@ -21,6 +21,7 @@ A typical repository structure is:
 ```text
 .
 ├── README.md
+├── data
 ├── src/
 │   ├── S_CARD_CSMA.m
 │   ├── main.m
