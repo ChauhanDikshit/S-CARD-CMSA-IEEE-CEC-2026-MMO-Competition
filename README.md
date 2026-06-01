@@ -22,8 +22,8 @@ A typical repository structure is:
 .
 ├── README.md
 ├── src/
-│   ├── RS_CMSA_ESII_v10_B4_density002.m
-│   ├── main_batch_*.m
+│   ├── S_CARD_CSMA.m
+│   ├── main.m
 │   └── utility functions
 ├── TR/
 │   └── CEC_2026_Technical_Report.pdf
@@ -31,14 +31,7 @@ A typical repository structure is:
 │   ├── submission_log.csv
 │   ├── summary files
 │   └── validation outputs
-├── submission/
-│   └── pid**pin**dim**.csv files
-└── docs/
-    ├── method_description.pdf
-    └── method_description.docx
 ```
-
-The exact folder names may differ depending on the uploaded version.
 
 ---
 
@@ -149,7 +142,7 @@ The density-filtering coefficient was tested using three settings:
 | **DF-SCA-Balanced** | **0.002** | **0.558904** | **0.870491** | **0.650922** | **0.604913** | **9.819** |
 | DF-SCA-High | 0.005 | 0.558954 | 0.810685 | 0.637740 | 0.598347 | 10.494 |
 
-The balanced setting, $\alpha_\rho=0.002$, was selected because it gave the best RPR--F1 trade-off.
+The balanced setting, $\alpha_\rho=0.002$, was selected because it gave the best RPR-F1 trade-off.
 
 ---
 
@@ -175,7 +168,7 @@ $$
 16\times 15\times 4 = 960
 $$
 
-PID--PIN--dimension combinations.
+PID-PIN-dimension combinations.
 
 ---
 
@@ -206,7 +199,7 @@ runList      = 1:1;
 Then run the corresponding main script, for example:
 
 ```matlab
-main_batch_RS_CMSA_ESII_v10_B4_density002
+main
 ```
 
 ### 3. Run the full official set
@@ -225,7 +218,7 @@ The output should contain 960 CSV files.
 
 ## Submission File Format
 
-Each submitted CSV file should correspond to one PID--PIN--dimension case and contain:
+Each submitted CSV file should correspond to one PID-PIN-dimension case and contain:
 
 - Columns $1,\ldots,D$: decision variables;
 - Column $D+1$: objective value.
@@ -293,11 +286,4 @@ Also cite the original RS-CMSA-ES and RS-CMSA-ESII papers, since S-CARD-CMSA is 
 ---
 
 ## License
-
-Please specify the license before public release. If no license is provided, the repository is not automatically open-source.
-
-Recommended options:
-
-- MIT License for permissive open-source release;
-- CC BY 4.0 for documentation only;
-- custom license if the official benchmark files have separate restrictions.
+- MIT License for permissive open-source release.
