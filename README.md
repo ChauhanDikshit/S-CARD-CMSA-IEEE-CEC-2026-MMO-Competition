@@ -51,14 +51,7 @@ $$
 
 The final reported solution set is obtained using density-filtered score-aware reporting:
 
-$$
-\mathcal{R}_{\mathrm{DF\mbox{-}SCA}}
-=
-\mathcal{D}_{\Delta_f,\tau_\rho}
-\left(
-\mathcal{A}\cup\mathcal{C}_f
-\right),
-$$
+$$\mathcal{R}_{\mathrm{DF\mbox{-}SCA}}=\mathcal{D}_{\Delta_f,\tau_\rho}\left(\mathcal{A}\cup\mathcal{C}_f\right),$$
 
 where $\mathcal{D}_{\Delta_f,\tau_\rho}(\cdot)$ denotes objective-value filtering and density-based duplicate control.
 
