@@ -22,11 +22,11 @@ A typical repository structure is:
 .
 ├── README.md
 ├── data/
-    ├── fstar-data.csv
-    ├── num-normal.csv
-    ├── num-uniform.csv
-    ├── pid-data.xlsx
-    ├── sequences.csv
+|   ├── fstar-data.csv
+|   ├── num-normal.csv
+|   ├── num-uniform.csv
+|   ├── pid-data.xlsx
+|   ├── sequences.csv
 ├── src/
 │   ├── S_CARD_CSMA.m
 │   ├── main.m
