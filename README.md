@@ -2,6 +2,16 @@
 
 This repository contains the MATLAB source code, method description, and supporting materials for **S-CARD-CMSA**, a score-aware candidate-archive and density-filtered reporting framework developed for the **IEEE CEC 2026 Competition on Benchmarking Niching Methods for Multimodal Optimization**.
 
+## Competition Result
+
+- **Competition:** IEEE CEC 2026 Competition on Benchmarking Niching Methods for Multimodal Optimization
+- **Rank:** **1st place**
+
+## Paper
+
+- **Title:** *S-CARD-CMSA: A Score-Aware Candidate Archive with Density-Filtered Reporting for Multimodal Optimization*
+- **arXiv:** https://arxiv.org/abs/2607.13764
+
 S-CARD-CMSA is built on **RS-CMSA-ESII** and introduces two conservative extensions:
 
 1. **Passive secondary candidate archive**  
@@ -27,10 +37,16 @@ A typical repository structure is:
 |   ├── num-uniform.csv
 |   ├── pid-data.xlsx
 |   ├── sequences.csv
+├── Code/
+    ├── main_S_CARD_CMSA.m
+    └── S_CARD_CMSA.m
 ├── src/
-│   ├── S_CARD_CSMA.m
-│   ├── main.m
-│   └── utility functions
+│   ├── BasicFun.m
+    ├── Dependency.m
+    ├── Minima.m
+    ├── ProblemMM.m
+│   ├── Rotation.m
+│   └── UtilityMethod.m
 ├── TR/
 │   └── CEC_2026_Technical_Report.pdf
 ├── results/
@@ -168,18 +184,27 @@ PID-PIN-dimension combinations.
 
 ### 1. Prepare the CEC 2026 benchmark files
 
-Place the official CEC 2026 benchmark files in the MATLAB path. The code expects the official `ProblemMM` interface and related benchmark files.
+Clone or download this repository. Keep the data, Code, and src folders in the same main working directory.
 
-Example:
+The main files are:
 
-```matlab
-addpath(pwd);
-addpath(genpath('path_to_CEC2026_benchmark'));
-```
+Code/main_S_CARD_CMSA.m
+Code/S_CARD_CMSA.m
+src/ProblemMM.m
 
-### 2. Run a small test
+The benchmark data files should remain inside the data folder.
 
-Edit the main batch file to use a small subset, for example:
+### 3. Set MATLAB path
+
+Open MATLAB and set the repository folder as the current working directory. Then add the required folders to the MATLAB path:
+
+addpath(genpath('Code'));
+addpath(genpath('src'));
+addpath(genpath('data'));
+
+### 3. Run a small test
+
+Open Code/main_S_CARD_CMSA.m and edit the settings for a small test:
 
 ```matlab
 pidList      = [1];
@@ -188,13 +213,13 @@ dimList      = [2];
 runList      = 1:1;
 ```
 
-Then run the corresponding main script, for example:
+Then run:
 
 ```matlab
-main
+main_S_CARD_CMSA
 ```
 
-### 3. Run the full official set
+### 4. Run the full official set
 
 For the final submission-scale output, use:
 
@@ -250,10 +275,13 @@ If you use this code or method, please cite the corresponding method report or r
 
 ```bibtex
 @misc{chauhan2026scardcmsa,
-  author       = {Dikshit Chauhan},
-  title        = {S-CARD-CMSA: A Score-Aware Candidate Archive with Density-Filtered Reporting for Multimodal Optimization},
-  year         = {2026},
-  note         = {Method report for the IEEE CEC 2026 Competition on Benchmarking Niching Methods for Multimodal Optimization}
+      title={S-CARD-CMSA: A Score-Aware Candidate Archive with Density-Filtered Reporting for Multimodal Optimization}, 
+      author={Dikshit Chauhan},
+      year={2026},
+      eprint={2607.13764},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/2607.13764}, 
 }
 ```
 
