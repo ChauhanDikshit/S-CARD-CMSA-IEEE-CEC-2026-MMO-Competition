@@ -188,9 +188,9 @@ Clone or download this repository. Keep the data, Code, and src folders in the s
 
 The main files are:
 
-Code/main_S_CARD_CMSA.m
-Code/S_CARD_CMSA.m
-src/ProblemMM.m
+Code/main_S_CARD_CMSA.m;
+Code/S_CARD_CMSA.m;
+src/ProblemMM.m;
 
 The benchmark data files should remain inside the data folder.
 
